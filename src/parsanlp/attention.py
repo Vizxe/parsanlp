@@ -2,6 +2,12 @@ import tensorflow as tf
 
 
 class AttentionHead(tf.keras.layers.Layer):
+    """
+    A class representing a single attention head in a multi-head attention mechanism.
+
+    Args:
+        dmodel (int): The dimensionality of the model.
+    """
     def __init__(self, dmodel):
         super(AttentionHead, self).__init__()
         self.dims = dmodel
@@ -22,6 +28,13 @@ class AttentionHead(tf.keras.layers.Layer):
 
 
 class MultiHeadAttention(tf.keras.layers.Layer):
+    """
+    A class representing multi-head attention mechanism.
+
+    Args:
+        h (int): Number of attention heads.
+        dmodel (int): The dimensionality of the model. Aka the output vector dims.
+    """
     def __init__(self, h, dmodel):
         super(MultiHeadAttention, self).__init__()
         self.h = h
@@ -29,7 +42,7 @@ class MultiHeadAttention(tf.keras.layers.Layer):
 
         self.heads = [AttentionHead(dmodel) for _ in range(h)]
 
-        self.linear = tf.keras.layers.Dense(self.dims)
+        self.linear = tf.keras.layers.Dense(dmodel)
         self.add = tf.keras.layers.Add()
 
     def call(self, input):
