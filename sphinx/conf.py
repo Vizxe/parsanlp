@@ -8,12 +8,12 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../src/parsanlp'))
+sys.path.insert(0, os.path.abspath('../src'))
 
 project = 'parsanlp'
 copyright = '2023, Parsa Hemmati'
 author = 'Parsa Hemmati'
-release = '1.0.3'
+release = '1.2.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

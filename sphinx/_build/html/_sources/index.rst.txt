@@ -1,5 +1,5 @@
 .. parsanlp documentation master file, created by
-   sphinx-quickstart on Sat Aug 12 17:40:05 2023.
+   sphinx-quickstart on Fri Aug 25 21:59:46 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -10,8 +10,7 @@ Welcome to parsanlp's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   modules
-
+   parsanlp
 
 
 Indices and tables
